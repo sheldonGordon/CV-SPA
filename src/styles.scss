@@ -1,0 +1,29 @@
+@import 'scss/reset';
+@import 'scss/base';
+
+#page {
+  display: grid;
+  height: 100%;
+  grid-template-areas: 'explorer dragbar content content';
+  grid-template-columns: auto 6px auto auto;
+  grid-template-rows: 100%;
+  background-color: blue;
+  padding: 10px;
+}
+
+#explorer {
+  grid-area: explorer;
+  overflow: auto;
+  background-color: red;
+}
+
+#content {
+  grid-area: content;
+  overflow: auto;
+  background-color: green;
+}
+
+#dragbar {
+  grid-area: dragbar;
+	cursor: ew-resize;
+}
