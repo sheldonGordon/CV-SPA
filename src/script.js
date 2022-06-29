@@ -1,13 +1,12 @@
 let isLeftDragging = false;
+let dragbarWidth = 6;
+let page = document.getElementById("page");
 
 window.ResetColumnSizes = function ResetColumnSizes() {
-  // when page resizes return to default col sizes
-  let page = document.getElementById("page");
   page.style.gridTemplateColumns = "auto 6px auto auto";
 }
 
 window.SetCursor = function SetCursor(cursor) {
-  let page = document.getElementById("page");
   page.style.cursor = cursor;
 }
 
@@ -25,23 +24,14 @@ window.EndDrag = function EndDrag() {
 
 window.OnDrag = function OnDrag(event) {
   if (isLeftDragging) {
-    let page = document.getElementById("page");
-    let leftcol = document.getElementById("explorer");
-
-    let leftColWidth = isLeftDragging ? event.clientX : leftcol.clientWidth;
-
-    let dragbarWidth = 6;
-
     let cols = [
-      leftColWidth,
+      event.clientX,
       dragbarWidth,
-      page.clientWidth - 2 * dragbarWidth - leftColWidth,
+      page.clientWidth - 2 * dragbarWidth - event.clientX,
       "auto"
     ];
 
-    let newColDefn = cols.map((c) => c.toString() === "auto" ? c.toString() : c.toString() + "px").join(" ");
-
-    page.style.gridTemplateColumns = newColDefn;
+    page.style.gridTemplateColumns = cols.map((c) => c.toString() === "auto" ? c.toString() : c.toString() + "px").join(" ");
 
     event.preventDefault();
   }
