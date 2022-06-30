@@ -47,15 +47,29 @@
   <body onresize="ResetColumnSizes()">
     <div id="page" onmouseup="EndDrag()" onmousemove="OnDrag(event)">
       <header id="explorer">
-        fr.developpeur.cv
         <nav>
-          <ul>
-            <li>EtatCivil.class</li>
-            <li>Technologie.class</li>
-            <li>Experience.class</li>
-            <li>Formation.class</li>
-            <li>Langue.class</li>
-            <li>Loisir.class</li>
+          <ul id="ul-tree">
+            <li>
+              <span class="caret">fr</span>
+              <ul class="nested">
+                <li>
+                  <span class="caret">developpeur</span>
+                  <ul class="nested">
+                    <li>
+                      <span class="caret">cv</span>
+                      <ul class="nested">
+                        <li>EtatCivil.java</li>
+                        <li>Technologie.java</li>
+                        <li>Experience.java</li>
+                        <li>Formation.java</li>
+                        <li>Langue.java</li>
+                        <li>Loisir.java</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </header>
