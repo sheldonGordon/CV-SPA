@@ -5,7 +5,7 @@ let dragbarWidth = 6;
 let page = document.getElementById("page");
 
 window.ResetColumnSizes = function ResetColumnSizes() {
-  page.style.gridTemplateColumns = "auto 6px auto auto";
+  page.style.gridTemplateColumns = "15em 6px auto auto";
   page.style.gridTemplateRows = "auto auto auto auto 6px auto";
 };
 
