@@ -116,3 +116,37 @@ body {
   float: left;
   margin: 0 6px 0 0;
 }
+
+.top-content{
+  display: flex;
+}
+
+.top-content-item{
+  color: var(--gray);
+  background-color: var(--white);
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-right: 2px;
+}
+
+.top-content-item::before {
+  content: "";
+  display: block;
+  background: url("icons/java.svg");
+  background-size: 100%;
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: 0 6px 0 0;
+}
+
+.top-content-item::after {
+  content: "";
+  display: block;
+  background: url("icons/close.svg") no-repeat;
+  width: 20px;
+  height: 20px;
+  float: right;
+  margin: 0 6px 0 0;
+}

@@ -79,3 +79,13 @@ for (let i = 0; i < toggler.length; i++) {
     this.classList.toggle("arrow-down");
   });
 }
+
+//############## CLICK LIEN ##############
+let link = document.getElementsByClassName("link");
+
+for (let i = 0; i < link.length; i++) {
+  link[i].addEventListener("click", function (){
+    console.log(this.getAttribute("href"));
+    document.getElementById(this.getAttribute("href").substring(1)).classList.toggle("active");
+  })
+}
