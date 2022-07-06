@@ -6,6 +6,11 @@
   src: url("./fonts/JetBrainsMono-Regular.woff2") format("woff2");
 }
 
+:root {
+  --white: #FDFDFD;
+  --gray: #6E6E6E;
+}
+
 body {
   font-family: "JetBrains";
 }
@@ -30,7 +35,12 @@ body {
 #explorer {
   grid-area: explorer;
   overflow: auto;
-  background-color: red;
+  background-color: var(--gray);
+  color: var(--white);
+  border: 6px solid;
+  border-color: var(--white);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
 }
 
 #content {
@@ -62,23 +72,21 @@ body {
   margin-left: 1em;
 }
 
-.caret {
+.arrow {
   cursor: pointer;
-  -webkit-user-select: none; /* Safari 3.1+ */
-  -moz-user-select: none; /* Firefox 2+ */
-  -ms-user-select: none; /* IE 10+ */
-  user-select: none;
-}
-
-.caret::before {
-  content: "\25B6";
-  color: black;
+  border: solid var(--white);
+  border-width: 0 3px 3px 0;
   display: inline-block;
+  padding: 3px;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
   margin-right: 6px;
+  margin-left: 6px;
 }
 
-.caret-down::before {
-  transform: rotate(90deg);
+.arrow-down{
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
 
 .nested {
@@ -87,4 +95,24 @@ body {
 
 .active {
   display: block;
+}
+
+/* ***************************************
+**************** WINDOWS *****************
+*************************************** */
+.top{
+  color: var(--gray);
+  background-color: var(--white);
+  padding: 10px;
+}
+
+.top::before {
+  content: "";
+  display: block;
+  background: url("icons/javaeeToolWindow.svg");
+  background-size: 100%;
+  width: 20px;
+  height: 20px;
+  float: left;
+  margin: 0 6px 0 0;
 }
