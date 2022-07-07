@@ -47,6 +47,15 @@ body {
   grid-area: content;
   overflow: auto;
   background-color: green;
+  width: 100%;
+  display: grid;
+  grid-template-areas:
+  'top-content'
+  'content-page';
+  grid-template-columns: auto;
+  grid-template-rows: 2.5rem auto;
+  color: var(--white);
+  background-color: var(--gray);
 }
 
 #console {
@@ -118,6 +127,7 @@ body {
 }
 
 .top-content{
+  grid-area: top-content;
   display: flex;
 }
 
@@ -149,4 +159,10 @@ body {
   height: 20px;
   float: right;
   margin: 0 6px 0 0;
+}
+
+.content-page{
+  grid-area: content-page;
+  border: 6px solid;
+  border-color: var(--white);
 }
