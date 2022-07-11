@@ -82,10 +82,35 @@ for (let i = 0; i < toggler.length; i++) {
 
 //############## CLICK LIEN ##############
 let link = document.getElementsByClassName("link");
+let content_part = document.getElementsByClassName("content-part");
 
 for (let i = 0; i < link.length; i++) {
   link[i].addEventListener("click", function (){
-    console.log(this.getAttribute("href"));
-    document.getElementById(this.getAttribute("href").substring(1)).classList.toggle("active");
+    for(let j = 0; j < content_part.length ; j++){
+      if(content_part[j].getAttribute("id").toString() !== this.getAttribute("href").substring(1)){
+        content_part[j].classList.remove("active");
+        content_part[j].classList.add("nested");
+      }else{
+        content_part[j].classList.remove("nested");
+        content_part[j].classList.add("active");
+      }
+    }
+  })
+}
+
+//############## CLICK ONGLET ##############
+let top_content_item = document.getElementsByClassName("top-content-item");
+
+for(let i = 0; i < top_content_item.length; i++){
+  top_content_item[i].addEventListener("click", function (){
+    for(let j = 0; j < content_part.length ; j++){
+      if(content_part[j].getAttribute("id").toString() !== this.innerHTML.toString().slice(0, -5)){
+        content_part[j].classList.remove("active");
+        content_part[j].classList.add("nested");
+      }else{
+        content_part[j].classList.remove("nested");
+        content_part[j].classList.add("active");
+      }
+    }
   })
 }

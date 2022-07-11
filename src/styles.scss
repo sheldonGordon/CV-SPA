@@ -29,7 +29,7 @@ body {
   'console console console console';
   grid-template-columns: 15em 6px auto auto;
   grid-template-rows: auto auto auto auto 6px auto;
-  background-color: blue;
+  background-color: black;
 }
 
 #explorer {
@@ -66,12 +66,12 @@ body {
 
 #leftdragbar {
   grid-area: leftdragbar;
-	cursor: ew-resize;
+  cursor: ew-resize;
 }
 
 #bottomdragbar{
   grid-area: bottomdragbar;
-	cursor: ns-resize;
+  cursor: ns-resize;
 }
 
 /* ***************************************
@@ -138,6 +138,7 @@ body {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
   margin-right: 2px;
+  cursor: pointer;
 }
 
 .top-content-item::before {
