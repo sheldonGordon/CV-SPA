@@ -46,7 +46,6 @@ body {
 #content {
   grid-area: content;
   overflow: auto;
-  background-color: green;
   width: 100%;
   display: grid;
   grid-template-areas:
@@ -60,8 +59,15 @@ body {
 
 #console {
   grid-area: console;
-  overflow: auto;
-  background-color: yellow;
+  overflow: auto;width: 100%;
+  display: grid;
+  grid-template-areas:
+  'top-console'
+  'content-console';
+  grid-template-columns: auto;
+  grid-template-rows: 2.5rem auto;
+  color: var(--white);
+  background-color: var(--gray);
 }
 
 #leftdragbar {
@@ -164,6 +170,37 @@ body {
 
 .content-page{
   grid-area: content-page;
+  border: 6px solid;
+  border-color: var(--white);
+}
+
+.top-console{
+  grid-area: top-console;
+  display: flex;
+}
+
+.top-console-item{
+  color: var(--gray);
+  background-color: var(--white);
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-right: 2px;
+  cursor: pointer;
+}
+
+.top-console-item::after {
+  content: "";
+  display: block;
+  background: url("icons/close.svg") no-repeat;
+  width: 20px;
+  height: 20px;
+  float: right;
+  margin: 0 6px 0 0;
+}
+
+.content-console{
+  grid-area: content-console;
   border: 6px solid;
   border-color: var(--white);
 }
