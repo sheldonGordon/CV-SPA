@@ -98,7 +98,7 @@ for (let i = 0; i < link.length; i++) {
   })
 }
 
-//############## CLICK ONGLET ##############
+//############## CLICK ONGLET CONTENT##############
 let top_content_item = document.getElementsByClassName("top-content-item");
 
 for(let i = 0; i < top_content_item.length; i++){
@@ -110,6 +110,24 @@ for(let i = 0; i < top_content_item.length; i++){
       }else{
         content_part[j].classList.remove("nested");
         content_part[j].classList.add("active");
+      }
+    }
+  })
+}
+
+//############## CLICK ONGLET CONSOLE##############
+let top_console_item = document.getElementsByClassName("top-console-item");
+let console_part = document.getElementsByClassName("console-part");
+
+for(let i = 0; i < top_console_item.length; i++){
+  top_console_item[i].addEventListener("click", function (){
+    for(let j = 0; j < console_part.length ; j++){
+      if(console_part[j].getAttribute("id").toString() !== this.innerHTML.toString()){
+        console_part[j].classList.remove("active");
+        console_part[j].classList.add("nested");
+      }else{
+        console_part[j].classList.remove("nested");
+        console_part[j].classList.add("active");
       }
     }
   })

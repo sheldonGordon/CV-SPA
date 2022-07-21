@@ -8,7 +8,16 @@
 
 :root {
   --white: #FDFDFD;
-  --gray: #6E6E6E;
+  --gray: #3c3f41;
+  --explorer-border: #2b2b2b;
+  --content-border: #3c3f41;
+  --console-border: #3c3f41;
+  --tab-back: #3c3f41;
+  --tab-primary-selected: #4e5254;
+  --tab-secondary-selected: #4a88c7;
+  --content-back: #2b2b2b;
+  --console-back: #2b2b2b;
+  --explorer-back: #3c3f41;
 }
 
 body {
@@ -35,12 +44,10 @@ body {
 #explorer {
   grid-area: explorer;
   overflow: auto;
-  background-color: var(--gray);
+  background-color: var(--explorer-back);
   color: var(--white);
-  border: 6px solid;
-  border-color: var(--white);
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
+  border: 3px solid;
+  border-color: var(--explorer-border);
 }
 
 #content {
@@ -54,7 +61,7 @@ body {
   grid-template-columns: auto;
   grid-template-rows: 2.5rem auto;
   color: var(--white);
-  background-color: var(--gray);
+  background-color: var(--content-back);
 }
 
 #console {
@@ -67,7 +74,7 @@ body {
   grid-template-columns: auto;
   grid-template-rows: 2.5rem auto;
   color: var(--white);
-  background-color: var(--gray);
+  background-color: var(--console-back);
 }
 
 #leftdragbar {
@@ -116,9 +123,11 @@ body {
 **************** WINDOWS *****************
 *************************************** */
 .top{
-  color: var(--gray);
-  background-color: var(--white);
+  color: var(--white);
+  background-color: var(--tab-back);
   padding: 10px;
+  border-bottom: 3px solid;
+  border-color: var(--explorer-border);
 }
 
 .top::before {
@@ -138,11 +147,9 @@ body {
 }
 
 .top-content-item{
-  color: var(--gray);
-  background-color: var(--white);
+  color: var(--white);
+  background-color: var(--tab-back);
   padding: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
   margin-right: 2px;
   cursor: pointer;
 }
@@ -170,8 +177,8 @@ body {
 
 .content-page{
   grid-area: content-page;
-  border: 6px solid;
-  border-color: var(--white);
+  border: 3px solid;
+  border-color: var(--content-border);
 }
 
 .top-console{
