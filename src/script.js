@@ -95,6 +95,20 @@ for (let i = 0; i < link.length; i++) {
         content_part[j].classList.add("active");
       }
     }
+    for (let j = 0; j < top_content_item.length ; j++){
+      if(top_content_item[j].innerHTML.toString() === this.innerHTML.toString()){
+        top_content_item[j].classList.add("selected-top-content-item");
+      }else{
+        top_content_item[j].classList.remove("selected-top-content-item");
+      }
+    }
+    for (let j = 0; j < link.length ; j++){
+      if(link[j].innerHTML.toString() === this.innerHTML.toString()){
+        link[j].classList.add("selected-link");
+      }else{
+        link[j].classList.remove("selected-link");
+      }
+    }
   })
 }
 
@@ -107,9 +121,25 @@ for(let i = 0; i < top_content_item.length; i++){
       if(content_part[j].getAttribute("id").toString() !== this.innerHTML.toString().slice(0, -5)){
         content_part[j].classList.remove("active");
         content_part[j].classList.add("nested");
+        this.classList.remove("selected");
       }else{
         content_part[j].classList.remove("nested");
         content_part[j].classList.add("active");
+        this.classList.add("selected");
+      }
+    }
+    for (let j = 0; j < top_content_item.length ; j++){
+      if(top_content_item[j].innerHTML.toString() === this.innerHTML.toString()){
+        top_content_item[j].classList.add("selected-top-content-item");
+      }else{
+        top_content_item[j].classList.remove("selected-top-content-item");
+      }
+    }
+    for (let j = 0; j < link.length ; j++){
+      if(link[j].innerHTML.toString() === this.innerHTML.toString()){
+        link[j].classList.add("selected-link");
+      }else{
+        link[j].classList.remove("selected-link");
       }
     }
   })

@@ -119,6 +119,16 @@ body {
   display: block;
 }
 
+.selected-top-content-item{
+  background-color: var(--tab-primary-selected) !important;
+  border-bottom: 5px solid var(--tab-secondary-selected);
+}
+
+.selected-link{
+  background-color: var(--tab-secondary-selected);
+  display: block;
+  box-shadow: -100px 0 0 0 var(--tab-secondary-selected);
+}
 /* ***************************************
 **************** WINDOWS *****************
 *************************************** */
@@ -141,6 +151,9 @@ body {
   margin: 0 6px 0 0;
 }
 
+/* ***************************************
+**************** CONTENT *****************
+*************************************** */
 .top-content{
   grid-area: top-content;
   display: flex;
@@ -152,6 +165,10 @@ body {
   padding: 10px;
   margin-right: 2px;
   cursor: pointer;
+}
+
+.top-content-item:hover{
+  background-color: var(--tab-primary-selected) !important;
 }
 
 .top-content-item::before {
@@ -181,17 +198,18 @@ body {
   border-color: var(--content-border);
 }
 
+/* ***************************************
+**************** CONSOLE *****************
+*************************************** */
 .top-console{
   grid-area: top-console;
   display: flex;
 }
 
 .top-console-item{
-  color: var(--gray);
-  background-color: var(--white);
+  color: var(--white);
+  background-color: var(--tab-back);
   padding: 10px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
   margin-right: 2px;
   cursor: pointer;
 }
@@ -208,6 +226,6 @@ body {
 
 .content-console{
   grid-area: content-console;
-  border: 6px solid;
-  border-color: var(--white);
+  border: 3px solid;
+  border-color: var(--console-border);
 }
