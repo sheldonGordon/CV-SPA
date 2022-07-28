@@ -1,7 +1,8 @@
-<html>
+<html xmlns="http://www.w3.org/1999/html">
   <head>
     <title>Parcel Sandbox</title>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="src/prism.css" />
     <link rel="stylesheet" type="text/css" href="src/styles.scss" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <!-- Canonical -->
@@ -87,7 +88,41 @@
 
         <article class="content-page">
           <section id="EtatCivil" class="content-part">
-            EtatCivil
+            <pre class="language-java line-numbers"><code>public class EtatCivil{
+  private String nom;
+  private String prenom;
+  private LocalDate dateNaissance;
+
+  public EtatCivil(){
+    this.nom = "Chatelain";
+    this.prenom = "Aurelien";
+    this.dateNaissance = LocalDate.of(1989, 7, 12);
+  }
+
+  public String getNom(){
+    return this.nom;
+  }
+
+  public void setNom(String nom){
+    this.nom = nom;
+  }
+
+  public String getPrenom(){
+    return this.prenom;
+  }
+
+  public void setPrenom(String prenom){
+    this.prenom = prenom;
+  }
+
+  public LocalDate getDateNaissance(){
+    return this.dateNaissance;
+  }
+
+  public void setDateNaissance(LocalDate dateNaissance){
+    this.dateNaissance = dateNaissance;
+  }
+}</code></pre>
           </section>
           <section id="Technologie" class="content-part nested">
             Technologie
@@ -109,13 +144,13 @@
       <div id="bottomdragbar" onmousedown="StartBottomDrag()"></div>
       <footer id="console">
         <div class="top-console">
-          <div class="top-console-item">Contact</div>
+          <div class="top-console-item selected-top-console-item">Contact</div>
           <div class="top-console-item">Linkedin</div>
           <div class="top-console-item">GitHub</div>
           <div class="top-console-item">Soft skills</div>
         </div>
         <div class="content-console">
-          <div id="Contact" class="console-part active">Contact</div>
+          <div id="Contact" class="console-part active">Contact</br>Contact</br>Contact</br>Contact</br>Contact</br>Contact</br>Contact</br></div>
           <div id="Linkedin" class="console-part nested">Linkedin</div>
           <div id="GitHub" class="console-part nested">GitHub</div>
           <div id="Soft skills" class="console-part nested">Soft skills</div>
@@ -123,5 +158,6 @@
       </footer>
     </div>
     <script src="./src/script.js"></script>
+    <script src="./src/prism.js"></script>
   </body>
 </html>

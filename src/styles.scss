@@ -129,6 +129,11 @@ body {
   display: block;
   box-shadow: -100px 0 0 0 var(--tab-secondary-selected);
 }
+
+.selected-top-console-item{
+  background-color: var(--tab-primary-selected) !important;
+  border-bottom: 5px solid var(--tab-secondary-selected);
+}
 /* ***************************************
 **************** WINDOWS *****************
 *************************************** */
@@ -222,6 +227,10 @@ body {
   height: 20px;
   float: right;
   margin: 0 6px 0 0;
+}
+
+.top-console-item:hover{
+  background-color: var(--tab-primary-selected) !important;
 }
 
 .content-console{

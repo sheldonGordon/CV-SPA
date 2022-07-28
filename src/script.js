@@ -160,5 +160,12 @@ for(let i = 0; i < top_console_item.length; i++){
         console_part[j].classList.add("active");
       }
     }
+    for (let j = 0; j < top_console_item.length ; j++){
+      if(top_console_item[j].innerHTML.toString() === this.innerHTML.toString()){
+        top_console_item[j].classList.add("selected-top-console-item");
+      }else{
+        top_console_item[j].classList.remove("selected-top-console-item");
+      }
+    }
   })
 }
