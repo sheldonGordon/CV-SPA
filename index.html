@@ -125,7 +125,41 @@
 }</code></pre>
           </section>
           <section id="Technologie" class="content-part nested">
-            Technologie
+<pre class="language-java line-numbers"><code>public class Technologie{
+  private List< String > listLibelle;
+
+  public Technologie(){
+    this.listLibelle = new ArrayList< String >(0);
+    this.listLibelle.add("Java");
+    this.listLibelle.add("Jakarta EE");
+    this.listLibelle.add("Spring Boot");
+    this.listLibelle.add("Programmation orientée objet");
+    this.listLibelle.add("JPA");
+    this.listLibelle.add("JavaServer Faces (JSF)JavaServer");
+    this.listLibelle.add("HTML5");
+    this.listLibelle.add("CSS");
+    this.listLibelle.add("JavaScript");
+    this.listLibelle.add("Git");
+    this.listLibelle.add("Administration de bases de données");
+    this.listLibelle.add("PostgreSQL");
+    this.listLibelle.add("MongoDB");
+    this.listLibelle.add("ElasticSearch");
+    this.listLibelle.add("Administration de système Linux");
+    this.listLibelle.add("Ansible");
+    this.listLibelle.add("Docker");
+    this.listLibelle.add("Kubernetes");
+    this.listLibelle.add("Keycloak");
+    this.listLibelle.add("Kubernetes");
+  }
+
+  public String getListLibelle(){
+    return this.listLibelle;
+  }
+
+  public void setNom(List< String > listLibelle){
+    this.listLibelle = listLibelle;
+  }
+}</code></pre>
           </section>
           <section id="Experience" class="content-part nested">
             Experience
