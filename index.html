@@ -183,13 +183,29 @@
   public List< Experience > getListExperience(){
     List< Experience > resultList = new ArrayList< Experience >(3);
 
-    resultList.add(new Experience("Ministère des Armées",
-                                  "Paris",
-                                  "Développeur JAVA/JEE",
-                                  LocalDate.of(2011, 10, 1),
-                                  LocalDate.of(2015, 8, 1),
-                                  "Développement d'application web en respectant le cahier des charges, " +
-                                  "avec l'ensemble des nouvelles technologies (EJB3, JPA, ...)."));
+    resultList.add(new Experience(
+      "Ministère des Armées",
+      "Paris",
+      "Développeur JAVA/JEE",
+      LocalDate.of(2011, 10, 1),
+      LocalDate.of(2015, 8, 1),
+      "Développement d'applications web en respectant le cahier des charges fournist" +
+      "par les analystes développeur, mais aussi en respectant les normes et " +
+      "standards reconnus par la profession et en suivant l'état de l'art de la " +
+      "sécurité informatique à toutes les étapes." +
+      "Conception de la partie Front End exécution côté client en respectant la charte graphique choisie" +
+      "et Back End exécution côté serveur en gérant les accès à la base de données préalablement créée."));
+
+    resultList.add(new Experience(
+      "Ministère des Armées",
+      "Paris",
+      "Analyste développeur",
+      LocalDate.of(2015, 8, 1),
+      LocalDate.of(2019, 8, 1),
+      "Analyse, programmation, redaction de documentation techniques d'applications informatiques." +
+      "Réalisation des études techniques de besoins fonctionnels, création du cahier des charges, " +
+      "modélisation du système cible, réalisation de prototypage interface Homme/Machine, " +
+      "planifier et réaliser son travail de veille."));
 
     return resultList;
   }
