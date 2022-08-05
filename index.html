@@ -94,9 +94,9 @@
   private LocalDate dateNaissance;
 
   public EtatCivil(){
-    this.nom = "Chatelain";
-    this.prenom = "Aurelien";
-    this.dateNaissance = LocalDate.of(1989, 7, 12);
+    this.setNom("Chatelain");
+    this.setPrenom("Aurelien");
+    this.setDateNaissance(LocalDate.of(1989, 7, 12));
   }
 
   public String getNom(){
@@ -129,7 +129,7 @@
   private List< String > listLibelle;
 
   public Technologie(){
-    this.listLibelle = new ArrayList< String >(0);
+    this.listLibelle = new ArrayList< String >(20);
     this.listLibelle.add("Java");
     this.listLibelle.add("Jakarta EE");
     this.listLibelle.add("Spring Boot");
@@ -162,7 +162,78 @@
 }</code></pre>
           </section>
           <section id="Experience" class="content-part nested">
-            Experience
+            <pre class="language-java line-numbers"><code>public class Experience{
+  private String entreprise;
+  private String ville;
+  private String poste;
+  private LocalDate dateDebut;
+  private LocalDate dateFin;
+  private String description;
+
+  public Experience(String entreprise, String ville, String poste, LocalDate dateDebut,
+                    LocalDate dateFin, String description){
+    this.setEntreprise(entreprise);
+    this.setVille(ville);
+    this.setPoste(poste);
+    this.setDateDebut(dateDebut);
+    this.setDateFin(dateFin);
+    this.setDescription(description);
+  }
+
+  public List< Experience > getListExperience(){
+    List< Experience > resultList = new ArrayList< Experience >(3);
+
+    resultList.add(new Experience("Ministère des Armées",
+                                  "Paris",
+                                  "Développeur JAVA/JEE",
+                                  LocalDate.of(2011, 10, 1),
+                                  LocalDate.of(2015, 8, 1),
+                                  "Développement d'application web en respectant le cahier des charges, " +
+                                  "avec l'ensemble des nouvelles technologies (EJB3, JPA, ...)."));
+
+    return resultList;
+  }
+
+  public String getEntreprise(){
+    return this.entreprise;
+  }
+
+  public void setEntreprise(String entreprise){
+    this.entreprise = entreprise;
+  }
+
+  public String getVille(){
+    return this.ville;
+  }
+
+  public void setVille(String ville){
+    this.ville = ville;
+  }
+
+  public String getPoste(){
+    return this.poste;
+  }
+
+  public void setPoste(String poste){
+    this.poste = poste;
+  }
+
+  public LocalDate getDateDebut(){
+    return this.dateDebut;
+  }
+
+  public void setDateDebut(LocalDate dateDebut){
+    this.dateDebut = dateDebut;
+  }
+
+  public LocalDate getDateFin(){
+    return this.dateFin;
+  }
+
+  public void setDateFin(LocalDate dateFin){
+    this.dateFin = dateFin;
+  }
+}</code></pre>
           </section>
           <section id="Formation" class="content-part nested">
             Formation
@@ -187,7 +258,8 @@
           <div id="Contact" class="console-part active">Contact</br>Contact</br>Contact</br>Contact</br>Contact</br>Contact</br>Contact</br></div>
           <div id="Linkedin" class="console-part nested">Linkedin</div>
           <div id="GitHub" class="console-part nested">GitHub</div>
-          <div id="Soft skills" class="console-part nested">Soft skills</div>
+          <div id="Soft skills" class="console-part nested">Curiosité</br>Travail d'équipe</br>Autonomie</br>Rigueur</br>Polyvalence</br>
+          </div>
         </div>
       </footer>
     </div>
