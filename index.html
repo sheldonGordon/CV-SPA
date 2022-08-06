@@ -162,7 +162,7 @@
 }</code></pre>
           </section>
           <section id="Experience" class="content-part nested">
-            <pre class="language-java line-numbers"><code>public class Experience{
+<pre class="language-java line-numbers"><code>public class Experience{
   private String entreprise;
   private String ville;
   private String poste;
@@ -260,10 +260,90 @@
   public void setDateFin(LocalDate dateFin){
     this.dateFin = dateFin;
   }
+
+  public String getDescription(){
+    return this.description;
+  }
+
+  public void setDescription(String description){
+    this.description = description;
+  }
 }</code></pre>
           </section>
           <section id="Formation" class="content-part nested">
-            Formation
+<pre class="language-java line-numbers"><code>public class Formation{
+  private String etablissement;
+  private String ville;
+  private String diplome;
+  private LocalDate dateDebut;
+  private LocalDate dateFin;
+
+  public Formation(String etablissement, String ville, String diplome, LocalDate dateDebut,
+                    LocalDate dateFin){
+    this.setEtablissement(etablissement);
+    this.setVille(ville);
+    this.setDiplome(diplome);
+    this.setDateDebut(dateDebut);
+    this.setDateFin(dateFin);
+  }
+
+  public List< Formation > getListFormation(){
+    List< Formation > resultList = new ArrayList< Formation >(2);
+
+    resultList.add(new Formation(
+      "Lycée Guy Mollet",
+      "Arras",
+      "BTS Informatique de Gestion, option Développeur",
+      LocalDate.of(2008, 9, 1), LocalDate.of(2010, 7, 1)));
+
+    resultList.add(new Formation(
+      "Lycée Carnot",
+      "Arras",
+      "BAC Science et Technique Industriellle, génie électronique",
+      LocalDate.of(2006, 9, 1), LocalDate.of(2008, 7, 1)));
+
+    return resultList;
+  }
+  public String getEtablissement(){
+    return this.etablissement;
+  }
+
+  public void setEtablissement(String etablissement){
+    this.etablissement = etablissement;
+  }
+
+  public String getVille(){
+    return this.ville;
+  }
+
+  public void setVille(String ville){
+    this.ville = ville;
+  }
+
+  public String getDiplome(){
+    return this.diplome;
+  }
+
+  public void setDiplome(String diplome){
+    this.diplome = diplome;
+  }
+
+  public LocalDate getDateDebut(){
+    return this.dateDebut;
+  }
+
+  public void setDateDebut(LocalDate dateDebut){
+    this.dateDebut = dateDebut;
+  }
+
+  public LocalDate getDateFin(){
+    return this.dateFin;
+  }
+
+  public void setDateFin(LocalDate dateFin){
+    this.dateFin = dateFin;
+  }
+}</code></pre>
           </section>
           <section id="Langue" class="content-part nested">
             Langue
