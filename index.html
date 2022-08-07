@@ -130,26 +130,30 @@
 
   public Technologie(){
     this.listLibelle = new ArrayList< String >(20);
-    this.listLibelle.add("Java");
-    this.listLibelle.add("Jakarta EE");
-    this.listLibelle.add("Spring Boot");
-    this.listLibelle.add("Programmation orientée objet");
-    this.listLibelle.add("JPA");
-    this.listLibelle.add("JavaServer Faces (JSF)JavaServer");
-    this.listLibelle.add("HTML5");
-    this.listLibelle.add("CSS");
-    this.listLibelle.add("JavaScript");
-    this.listLibelle.add("Git");
-    this.listLibelle.add("Administration de bases de données");
-    this.listLibelle.add("PostgreSQL");
-    this.listLibelle.add("MongoDB");
-    this.listLibelle.add("ElasticSearch");
-    this.listLibelle.add("Administration de système Linux");
-    this.listLibelle.add("Ansible");
-    this.listLibelle.add("Docker");
-    this.listLibelle.add("Kubernetes");
-    this.listLibelle.add("Keycloak");
-    this.listLibelle.add("Kubernetes");
+    this.addTechnologie("Java");
+    this.addTechnologie("Jakarta EE");
+    this.addTechnologie("Spring Boot");
+    this.addTechnologie("Programmation orientée objet");
+    this.addTechnologie("JPA");
+    this.addTechnologie("JavaServer Faces (JSF)JavaServer");
+    this.addTechnologie("HTML5");
+    this.addTechnologie("CSS");
+    this.addTechnologie("JavaScript");
+    this.addTechnologie("Git");
+    this.addTechnologie("Administration de bases de données");
+    this.addTechnologie("PostgreSQL");
+    this.addTechnologie("MongoDB");
+    this.addTechnologie("ElasticSearch");
+    this.addTechnologie("Administration de système Linux");
+    this.addTechnologie("Ansible");
+    this.addTechnologie("Docker");
+    this.addTechnologie("Kubernetes");
+    this.addTechnologie("Keycloak");
+    this.addTechnologie("Kubernetes");
+  }
+
+  public void addTechnologie(String technologie){
+    this.listLibelle.add(technologie);
   }
 
   public String getListLibelle(){
@@ -346,10 +350,68 @@
 }</code></pre>
           </section>
           <section id="Langue" class="content-part nested">
-            Langue
+<pre class="language-java line-numbers"><code>public class Langue{
+  private String langue;
+  private String niveau;
+
+  public Experience(String langue, String niveau{
+    this.setLangue(langue);
+    this.setNiveau(niveau);
+  }
+
+  public List< Langue > getListLangue(){
+    List< Langue > resultList = new ArrayList< Experience >(2);
+
+    resultList.add(new Langue("Français", "Langue natale");
+    resultList.add(new Langue("Anglais", "Scolaire");
+
+    return resultList;
+  }
+
+  public String getLangue(){
+    return this.langue;
+  }
+
+  public void setLangue(String entreprise){
+    this.langue = langue;
+  }
+
+  public String getNiveau(){
+    return this.niveau;
+  }
+
+  public void setNiveau(String niveau){
+    this.niveau = niveau;
+  }
+}</code></pre>
           </section>
           <section id="Loisir" class="content-part nested">
-            Loisir
+<pre class="language-java line-numbers"><code>public class Loisir{
+  private List< String > listLibelle;
+
+  public Loisir(){
+    this.listLibelle = new ArrayList< String >(7);
+    this.addLoisir("Informatique");
+    this.addLoisir("Electronique");
+    this.addLoisir("Jeux vidéos");
+    this.addLoisir("Impression 3D");
+    this.addLoisir("Bricolage");
+    this.addLoisir("Course à pied");
+    this.addLoisir("Randonées");
+  }
+
+  public void addLoisir(String loisir){
+    this.listLibelle.add(loisir);
+  }
+
+  public String getListLibelle(){
+    return this.listLibelle;
+  }
+
+  public void setNom(List< String > listLibelle){
+    this.listLibelle = listLibelle;
+  }
+}</code></pre>
           </section>
         </article>
       </main>
@@ -362,7 +424,21 @@
           <div class="top-console-item">Soft skills</div>
         </div>
         <div class="content-console">
-          <div id="Contact" class="console-part active">Contact</br>Contact</br>Contact</br>Contact</br>Contact</br>Contact</br>Contact</br></div>
+          <div id="Contact" class="console-part active">
+            <div style="margin-bottom: 8px">
+              <img src="src/icons/androidDevice.svg" class="icons-contact">
+              <div class="element-contact">06 27 23 70 74</div>
+
+            </div>
+            <div style="margin-bottom: 8px">
+              <img src="src/icons/directive.svg" class="icons-contact">
+              <div class="element-contact">achatelain62000@gmail.com</div>
+            </div>
+            <div>
+              <img src="src/icons/mail.svg" class="icons-contact">
+              <div class="element-contact">8 rue lavoisier, 62000 Arras</div>
+            </div>
+          </div>
           <div id="Linkedin" class="console-part nested">Linkedin</div>
           <div id="GitHub" class="console-part nested">GitHub</div>
           <div id="Soft skills" class="console-part nested">Curiosité</br>Travail d'équipe</br>Autonomie</br>Rigueur</br>Polyvalence</br>
