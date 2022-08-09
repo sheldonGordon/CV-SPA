@@ -53,13 +53,13 @@
           <ul id="ul-tree">
             <li>
               <i class="arrow"></i>fr
-              <ul class="active">
+              <ul class="nested">
                 <li>
                   <i class="arrow"></i>developpeur
-                  <ul class="active">
+                  <ul class="nested">
                     <li>
                       <i class="arrow"></i>cv
-                      <ul class="active">
+                      <ul class="nested">
                         <li><a href="#EtatCivil" class="link selected-link">EtatCivil.java</a></li>
                         <li><a href="#Technologie" class="link">Technologie.java</a></li>
                         <li><a href="#Experience" class="link">Experience.java</a></li>
@@ -354,7 +354,7 @@
   private String langue;
   private String niveau;
 
-  public Experience(String langue, String niveau{
+  public Experience(String langue, String niveau){
     this.setLangue(langue);
     this.setNiveau(niveau);
   }

@@ -37,7 +37,7 @@ body {
   'bottomdragbar bottomdragbar bottomdragbar bottomdragbar'
   'console console console console';
   grid-template-columns: 15em 6px auto auto;
-  grid-template-rows: auto auto auto auto 6px auto;
+  grid-template-rows: auto auto auto auto 6px 15em;
   background-color: black;
 }
 
@@ -62,11 +62,14 @@ body {
   grid-template-rows: 2.5rem auto;
   color: var(--white);
   background-color: var(--content-back);
+  border-bottom: 3px solid;
+  border-color: var(--content-border);
 }
 
 #console {
   grid-area: console;
-  overflow: auto;width: 100%;
+  overflow: auto;
+  width: 100%;
   display: grid;
   grid-template-areas:
   'top-console'
@@ -75,6 +78,8 @@ body {
   grid-template-rows: 2.5rem auto;
   color: var(--white);
   background-color: var(--console-back);
+  border-bottom: 3px solid;
+  border-color: var(--content-border);
 }
 
 #leftdragbar {
@@ -107,8 +112,15 @@ body {
 }
 
 .arrow-down{
+  cursor: pointer;
+  border: solid var(--white);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
+  margin-right: 6px;
+  margin-left: 6px;
 }
 
 .nested {
@@ -160,8 +172,14 @@ body {
 **************** CONTENT *****************
 *************************************** */
 .top-content{
-  grid-area: top-content;
+  //grid-area: top-content;
   display: flex;
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  background-color: var(--content-back);
+  border-bottom: 3px solid;
+  border-color: var(--content-border);
 }
 
 .top-content-item{
@@ -199,7 +217,8 @@ body {
 
 .content-page{
   grid-area: content-page;
-  border: 3px solid;
+  border-left: 3px solid;
+  border-right: 3px solid;
   border-color: var(--content-border);
 }
 
@@ -207,8 +226,14 @@ body {
 **************** CONSOLE *****************
 *************************************** */
 .top-console{
-  grid-area: top-console;
+  //grid-area: top-console;
   display: flex;
+  position: absolute;
+  z-index: 5;
+  width: 100%;
+  background-color: var(--content-back);
+  border-bottom: 3px solid;
+  border-color: var(--content-border);
 }
 
 .top-console-item{
@@ -234,8 +259,11 @@ body {
 }
 
 .content-console{
+  padding-top: 15px;
+  padding-left: 5px;
   grid-area: content-console;
-  border: 3px solid;
+  border-left: 3px solid;
+  border-right: 3px solid;
   border-color: var(--console-border);
 }
 
