@@ -1,74 +1,4 @@
-<html xmlns="http://www.w3.org/1999/html">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="src/prism.css" />
-    <link rel="stylesheet" type="text/css" href="src/styles.scss" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <!-- Device -->
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5"
-    />
-
-    <meta name="format-detection" content="telephone=no" />
-    <!-- Title -->
-    <title>Chatelain aurélien</title>
-    <!-- Description -->
-    <meta name="description" content="Home description." />
-    <!-- Favicon -->
-    <meta name="theme-color" content="#fff" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Tenor+Sans&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-
-  <body onresize="ResetColumnSizes()">
-    <div id="page" onmouseup="EndDrag()" onmousemove="OnDrag(event)">
-      <header id="explorer">
-        <div class="top">Projet</div>
-        <nav>
-          <ul id="ul-tree">
-            <li>
-              <i class="arrow"></i>fr
-              <ul class="nested">
-                <li>
-                  <i class="arrow"></i>developpeur
-                  <ul class="nested">
-                    <li>
-                      <i class="arrow"></i>cv
-                      <ul class="nested">
-                        <li><a id="EtatCivilLink" href="#" class="link selected-link">EtatCivil.java</a></li>
-                        <li><a id="TechnologieLink" href="#" class="link">Technologie.java</a></li>
-                        <li><a id="ExperienceLink" href="#" class="link">Experience.java</a></li>
-                        <li><a id="FormationLink" href="#" class="link">Formation.java</a></li>
-                        <li><a id="LangueLink" href="#" class="link">Langue.java</a></li>
-                        <li><a id="LoisirLink" href="#" class="link">Loisir.java</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <div id="leftdragbar" onmousedown="StartLeftDrag()"></div>
-      <main id="content">
-        <div class="top-content">
-          <div class="top-content-item selected-top-content-item">EtatCivil.java</div>
-          <div class="top-content-item">Technologie.java</div>
-          <div class="top-content-item">Experience.java</div>
-          <div class="top-content-item">Formation.java</div>
-          <div class="top-content-item">Langue.java</div>
-          <div class="top-content-item">Loisir.java</div>
-        </div>
-
-        <article class="content-page">
-          <section id="EtatCivil" class="content-part">
-            <pre class="language-java line-numbers"><code>public class EtatCivil{
+<html xmlns="http://www.w3.org/1999/html"><head><meta charset="UTF-8"><link rel="stylesheet" type="text/css" href="/prism.b0226080.css"><link rel="stylesheet" type="text/css" href="/styles.8f89a181.css"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5"><meta name="format-detection" content="telephone=no"><title>Chatelain aurélien</title><meta name="description" content="Home description."><meta name="theme-color" content="#fff"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fanwood+Text:ital@0;1&family=Tenor+Sans&display=swap" rel="stylesheet"></head><body onresize="ResetColumnSizes()"> <div id="page" onmouseup="EndDrag()" onmousemove="OnDrag(event)"> <header id="explorer"> <div class="top">Projet</div> <nav> <ul id="ul-tree"> <li> <i class="arrow"></i>fr <ul class="nested"> <li> <i class="arrow"></i>developpeur <ul class="nested"> <li> <i class="arrow"></i>cv <ul class="nested"> <li><a id="EtatCivilLink" href="#" class="link selected-link">EtatCivil.java</a></li> <li><a id="TechnologieLink" href="#" class="link">Technologie.java</a></li> <li><a id="ExperienceLink" href="#" class="link">Experience.java</a></li> <li><a id="FormationLink" href="#" class="link">Formation.java</a></li> <li><a id="LangueLink" href="#" class="link">Langue.java</a></li> <li><a id="LoisirLink" href="#" class="link">Loisir.java</a></li> </ul> </li> </ul> </li> </ul> </li> </ul> </nav> </header> <div id="leftdragbar" onmousedown="StartLeftDrag()"></div> <main id="content"> <div class="top-content"> <div class="selected-top-content-item top-content-item">EtatCivil.java</div> <div class="top-content-item">Technologie.java</div> <div class="top-content-item">Experience.java</div> <div class="top-content-item">Formation.java</div> <div class="top-content-item">Langue.java</div> <div class="top-content-item">Loisir.java</div> </div> <article class="content-page"> <section id="EtatCivil" class="content-part"> <pre class="language-java line-numbers"><code>public class EtatCivil{
   private String nom;
   private String prenom;
   private LocalDate dateNaissance;
@@ -102,10 +32,7 @@
   public void setDateNaissance(LocalDate dateNaissance){
     this.dateNaissance = dateNaissance;
   }
-}</code></pre>
-          </section>
-          <section id="Technologie" class="content-part nested">
-<pre class="language-java line-numbers"><code>public class Technologie{
+}</code></pre> </section> <section id="Technologie" class="content-part nested"> <pre class="language-java line-numbers"><code>public class Technologie{
   private List< String > listLibelle;
 
   public Technologie(){
@@ -143,10 +70,7 @@
   public void setNom(List< String > listLibelle){
     this.listLibelle = listLibelle;
   }
-}</code></pre>
-          </section>
-          <section id="Experience" class="content-part nested">
-<pre class="language-java line-numbers"><code>public class Experience{
+}</code></pre> </section> <section id="Experience" class="content-part nested"> <pre class="language-java line-numbers"><code>public class Experience{
   private String entreprise;
   private String ville;
   private String poste;
@@ -252,10 +176,7 @@
   public void setDescription(String description){
     this.description = description;
   }
-}</code></pre>
-          </section>
-          <section id="Formation" class="content-part nested">
-<pre class="language-java line-numbers"><code>public class Formation{
+}</code></pre> </section> <section id="Formation" class="content-part nested"> <pre class="language-java line-numbers"><code>public class Formation{
   private String etablissement;
   private String ville;
   private String diplome;
@@ -327,10 +248,7 @@
   public void setDateFin(LocalDate dateFin){
     this.dateFin = dateFin;
   }
-}</code></pre>
-          </section>
-          <section id="Langue" class="content-part nested">
-<pre class="language-java line-numbers"><code>public class Langue{
+}</code></pre> </section> <section id="Langue" class="content-part nested"> <pre class="language-java line-numbers"><code>public class Langue{
   private String langue;
   private String niveau;
 
@@ -363,10 +281,7 @@
   public void setNiveau(String niveau){
     this.niveau = niveau;
   }
-}</code></pre>
-          </section>
-          <section id="Loisir" class="content-part nested">
-<pre class="language-java line-numbers"><code>public class Loisir{
+}</code></pre> </section> <section id="Loisir" class="content-part nested"> <pre class="language-java line-numbers"><code>public class Loisir{
   private List< String > listLibelle;
 
   public Loisir(){
@@ -391,55 +306,4 @@
   public void setNom(List< String > listLibelle){
     this.listLibelle = listLibelle;
   }
-}</code></pre>
-          </section>
-        </article>
-      </main>
-      <div id="bottomdragbar" onmousedown="StartBottomDrag()"></div>
-      <footer id="console">
-        <div class="top-console">
-          <div class="top-console-item selected-top-console-item">Contact</div>
-          <div class="top-console-item">Linkedin</div>
-          <div class="top-console-item">GitHub</div>
-          <div class="top-console-item">Soft skills</div>
-        </div>
-        <div class="content-console">
-          <div id="Contact" class="console-part active">
-            <div style="margin-bottom: 8px">
-              <img src="src/icons/androidDevice.svg" class="icons-contact">
-              <div class="element-contact">06 27 23 70 74</div>
-
-            </div>
-            <div style="margin-bottom: 8px">
-              <img src="src/icons/directive.svg" class="icons-contact">
-              <div class="element-contact">achatelain62000@gmail.com</div>
-            </div>
-            <div>
-              <img src="src/icons/mail.svg" class="icons-contact">
-              <div class="element-contact">8 rue lavoisier, 62000 Arras</div>
-            </div>
-          </div>
-          <div id="Linkedin" class="console-part nested">
-            <img src="src/icons/link.svg" class="icons-contact">
-            <a target="_blank" class="element-contact" href="https://www.linkedin.com/in/aurélien-chatelain-129612a7">
-              Linkedin => Aurélien chatelain</a>
-          </div>
-          <div id="GitHub" class="console-part nested">
-            <img src="src/icons/github_dark.svg" class="icons-contact">
-            <a target="_blank" class="element-contact" href="https://github.com/sheldonGordon/">github => sheldonGordon</a>
-          </div>
-          <div id="Soft skills" class="console-part nested">
-            Curiosité</br>
-            Travail d'équipe</br>
-            Autonomie</br>
-            Rigueur</br>
-            Polyvalence</br>
-            Ouvert d'esprit
-          </div>
-        </div>
-      </footer>
-    </div>
-    <script src="./src/script.js"></script>
-    <script src="./src/prism.js"></script>
-  </body>
-</html>
+}</code></pre> </section> </article> </main> <div id="bottomdragbar" onmousedown="StartBottomDrag()"></div> <footer id="console"> <div class="top-console"> <div class="selected-top-console-item top-console-item">Contact</div> <div class="top-console-item">Linkedin</div> <div class="top-console-item">GitHub</div> <div class="top-console-item">Soft skills</div> </div> <div class="content-console"> <div id="Contact" class="active console-part"> <div style="margin-bottom:8px"> <img src="/androidDevice.8022540d.svg" class="icons-contact"> <div class="element-contact">06 27 23 70 74</div> </div> <div style="margin-bottom:8px"> <img src="/directive.3171e584.svg" class="icons-contact"> <div class="element-contact">achatelain62000@gmail.com</div> </div> <div> <img src="/mail.afb718de.svg" class="icons-contact"> <div class="element-contact">8 rue lavoisier, 62000 Arras</div> </div> </div> <div id="Linkedin" class="console-part nested"> <img src="/link.42e769a8.svg" class="icons-contact"> <a target="_blank" class="element-contact" href="https://www.linkedin.com/in/aurélien-chatelain-129612a7"> Linkedin => Aurélien chatelain</a> </div> <div id="GitHub" class="console-part nested"> <img src="/github_dark.19779abc.svg" class="icons-contact"> <a target="_blank" class="element-contact" href="https://github.com/sheldonGordon/">github => sheldonGordon</a> </div> <div id="Soft skills" class="console-part nested"> Curiosité<br> Travail d'équipe<br> Autonomie<br> Rigueur<br> Polyvalence<br> Ouvert d'esprit </div> </div> </footer> </div> <script src="/script.82395840.js"></script> <script src="/prism.ba4021b1.js"></script> </body></html>

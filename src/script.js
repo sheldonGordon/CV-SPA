@@ -87,7 +87,7 @@ let content_part = document.getElementsByClassName("content-part");
 for (let i = 0; i < link.length; i++) {
   link[i].addEventListener("click", function (){
     for(let j = 0; j < content_part.length ; j++){
-      if(content_part[j].getAttribute("id").toString() !== this.getAttribute("href").substring(1)){
+      if(content_part[j].getAttribute("id").toString() !== this.getAttribute("id").toString().slice(0, -4)){
         content_part[j].classList.remove("active");
         content_part[j].classList.add("nested");
       }else{
