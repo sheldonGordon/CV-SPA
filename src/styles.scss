@@ -14,3 +14,13 @@ section {
   height: 100vh;
   padding: 10em;
 }
+
+.custom-h2 {
+  opacity: 0;
+  transition: opacity 6s;
+}
+
+.class-call-h2 {
+  opacity: 1;
+
+}
