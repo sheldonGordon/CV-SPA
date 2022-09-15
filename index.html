@@ -1,43 +1,30 @@
-<html>
+<!doctype html>
+<html lang="fr">
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <!-- Device -->
-    <!-- <meta name="viwport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5">
-    <meta name="format-detection" content="telephone=no">
+    <meta charset="utf-8">
     <!-- Title -->
     <title>Chatelain aurelien</title>
     <!-- Favicon -->
     <meta name="theme-color" content="#fff">
 
-    <link rel="stylesheet" type="text/css" href="src/fullpage.css" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="src/styles.scss">
 
 </head>
 
 <body>
 
-<div id="fullpage">
-    <div class="section">Section 1</div>
-    <div class="section">
-        <div class="slide" data-anchor="slide1">Slide 2.1</div>
-        <div class="slide" data-anchor="slide2">Slide 2.2</div>
-    </div>
-    <div class="section">Section 3</div>
-    <div class="section">Section 4</div>
+<div data-scroll-container>
+    <section data-scroll-section>
+        <h1 data-scroll>Hey</h1>
+        <p data-scroll>👋</p>
+    </section>
+    <section data-scroll-section>
+        <h2 data-scroll>What's up?</h2>
+        <p data-scroll>😬</p>
+    </section>
 </div>
 
 <script src="src/index.ts"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.11/fullpage.min.js" integrity="sha512-ojnoeSkK5NDwnuW5S0ZnddobHez8Bx1yVa3RE+Cd0fGEuY/NEd4sgVF/CJ6eDtnOeLZLbTJpNFrCkUYbHS2hRA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-    new fullpage('#fullpage', {
-        sectionsColor: ['yellow', 'orange', '#C0C0C0', '#ADD8E6'],
-
-        // Get your license at https://alvarotrigo.com/fullPage/pricing/
-        licenseKey: 'YOUR LICENSE KEY HERE '
-    });
-</script>
-
 </body>
 </html>
