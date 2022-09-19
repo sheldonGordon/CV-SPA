@@ -1,5 +1,6 @@
-//@import 'scss/reset';
-//@import 'scss/base';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
   box-sizing: border-box;
@@ -15,12 +16,21 @@ section {
   padding: 10em;
 }
 
-.custom-h2 {
+.hidden-class {
   opacity: 0;
-  transition: opacity 6s;
+  transition: opacity 4s;
 }
 
-.class-call-h2 {
+.call-show-class {
   opacity: 1;
+}
 
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
