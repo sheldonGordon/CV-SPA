@@ -1,18 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-* {
-  box-sizing: border-box;
-}
-
 body {
+  background-color: #160F29;
+  color: white;
+}
+section:first-of-type {
   height: 100vh;
-  margin: 0;
+  padding: 10em;
 }
 
 section {
-  height: 100vh;
   padding: 10em;
 }
 
@@ -24,4 +19,8 @@ section {
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   text-align: center;
+}
+
+.card{
+  background-color: #160F29;
 }
