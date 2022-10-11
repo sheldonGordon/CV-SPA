@@ -1,5 +1,5 @@
 body {
-  background-color: #160F29;
+  background-color: #09203f;
   color: white;
 }
 section:first-of-type {
@@ -22,9 +22,14 @@ section {
 }
 
 .card{
-  background-color: #160F29;
+  background-image: linear-gradient(to right, #09203f 0%, #537895 100%);
+  border: none;
 }
 
 .icon-custom{
   max-height: 150px;
+}
+
+.list-element{
+  background-image: linear-gradient(to right, #09203f 0%, #537895 100%);
 }
